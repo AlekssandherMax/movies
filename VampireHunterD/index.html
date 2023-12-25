@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="rei.jfif">
+    <title>Download Vampire Hunter D: Bloodlust</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            background: url('R.jfif') no-repeat center center fixed;
+            background-size: cover;
+            background-color: #000;
+        }
+
+        .container {
+            max-width: 600px;
+            width: 100%;
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.8);
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+            text-align: center;
+        }
+
+        .movie-info {
+            margin-bottom: 20px;
+            color: #fff;
+        }
+
+        .download-button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: not-allowed;
+            background-color: #333;
+            color: white;
+            border: none;
+            border-radius: 5px;
+        }
+
+        .download-button:hover {
+            background-color: #555;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1 style="color: #fff;">Vampire Hunter D: Bloodlust</h1>
+
+        <button id="downloadButton" class="download-button" disabled>Aguarde 5 segundos</button>
+
+        <!-- Script de Temporizador -->
+        <script>
+            var downloadButton = document.getElementById('downloadButton');
+            var seconds = 5;
+
+            function countdown() {
+                if (seconds > 0) {
+                    downloadButton.textContent = 'Wait ' + seconds + ' seconds';
+                    seconds--;
+                    setTimeout(countdown, 1000);
+                } else {
+                    downloadButton.textContent = 'Download';
+                    downloadButton.disabled = false;
+                    downloadButton.style.backgroundColor = '#4CAF50';
+                    downloadButton.style.cursor = 'pointer';
+                }
+            }
+
+            window.onload = function () {
+                setTimeout(countdown, 0); // Iniciar a contagem regressiva imediatamente
+            };
+
+            // Simular o download quando o botão é clicado
+            downloadButton.addEventListener('click', function () {
+                window.location.href = 'VampireHunterDBloodlustMultiLang.torrent';
+            });
+        </script>
+    </div>
+
+</body>
+</html>
