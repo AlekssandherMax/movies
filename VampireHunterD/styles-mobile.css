@@ -1,0 +1,13 @@
+@media only screen and (max-width: 600px) {
+    body {
+        background-size: auto; /* Evita o corte da imagem de fundo em dispositivos menores */
+    }
+
+    .container {
+        padding: 10px; /* Reduz o preenchimento para telas menores */
+    }
+
+    .download-button {
+        padding: 10px 15px; /* Ajusta o tamanho do botão para telas menores */
+    }
+}
